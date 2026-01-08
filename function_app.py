@@ -5,10 +5,7 @@ import datetime
 import json
 import logging
 
-server = 'mysqldbforapple.database.windows.net'
-database = 'myFreeDB'
-username = 'YutoItakura'
-password = 'Y1120hafadai@'
+
 
 app = func.FunctionApp()
 
@@ -64,3 +61,4 @@ def http_trigger(req: func.HttpRequest) -> func.HttpResponse:
     except Exception as e:
         logging.error(f"Error fetching data: {e}")
         return func.HttpResponse(f"Error: {str(e)}", status_code=500)
+
